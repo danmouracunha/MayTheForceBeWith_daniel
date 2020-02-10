@@ -35,26 +35,21 @@ object ApiModule {
     @Reusable
     @JvmStatic
     internal fun provideRetrofitInterface(): Retrofit {
+        val logging = HttpLoggingInterceptor()
+        logging.level = HttpLoggingInterceptor.Level.BODY
+        val httpClient = OkHttpClient.Builder()
+        httpClient.addInterceptor(logging)
         val gson = GsonBuilder()
             .setLenient()
             .create()
 
-        val logging = HttpLoggingInterceptor()
-        logging.level = HttpLoggingInterceptor.Level.BODY
-        val httpClient = OkHttpClient.Builder()
+        httpClient.connectTimeout(30, TimeUnit.SECONDS)
+        httpClient.readTimeout(30, TimeUnit.SECONDS)
 
-        httpClient.readTimeout(230, TimeUnit.SECONDS)
-        httpClient.connectTimeout(230, TimeUnit.SECONDS)
-
-        //INTERCEPTORS
-        if (BuildConfig.DEBUG){
-            httpClient.addInterceptor(logging)
-        }
-
-        return Retrofit.Builder()
-            .baseUrl(API_URL)
-            .client(httpClient.build())
-            .addConverterFactory(GsonConverterFactory.create(gson))
+        val retrofit = Retrofit.Builder().baseUrl(API_URL)
+            .addConverterFactory(GsonConverterFactory.create(gson)).client(httpClient.build())
             .build()
+
+        return retrofit
     }
 }
