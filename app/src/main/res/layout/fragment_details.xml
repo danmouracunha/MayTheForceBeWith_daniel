@@ -20,11 +20,11 @@
                 android:id="@+id/txtCharacterName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@{detailsViewModel.personData.name}"
-                android:textColor="@color/colorPrimary"
-                android:textAlignment="center"
-                android:textSize="30sp"
                 android:layout_margin="10sp"
+                android:text="@{detailsViewModel.personData.name}"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/cbFavorite"
                 app:layout_constraintStart_toStartOf="parent"
@@ -33,10 +33,10 @@
         <CheckBox
                 android:id="@+id/cbFavorite"
                 android:layout_width="wrap_content"
-                android:textAlignment="center"
-                android:soundEffectsEnabled="true"
                 android:layout_height="0dp"
+                android:soundEffectsEnabled="true"
                 android:text="@string/details_favorite_cb_label"
+                android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtCharacterName" />
 
@@ -46,10 +46,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/lightColor"
                 android:padding="@dimen/default_padding"
                 android:text="@string/details_height_label"
                 android:textAlignment="center"
+                android:textColor="@color/lightColor"
                 android:textSize="@dimen/normal_text_size"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -57,50 +57,49 @@
 
         <TextView
                 android:id="@+id/txtCharacterHeight"
-                android:text="@{detailsViewModel.personData.height}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/normal_text_size"
+                android:text="@{detailsViewModel.personData.height}"
                 android:textAlignment="center"
+                android:textSize="@dimen/normal_text_size"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lblCharacterHeight"
-                 />
+                app:layout_constraintTop_toBottomOf="@+id/lblCharacterHeight" />
 
         <TextView
                 android:id="@+id/lblCharacterWeight"
-                android:text="@string/details_mass_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/lightColor"
                 android:padding="@dimen/default_padding"
+                android:text="@string/details_mass_label"
                 android:textAlignment="center"
+                android:textColor="@color/lightColor"
                 android:textSize="@dimen/normal_text_size"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtCharacterHeight"/>
+                app:layout_constraintTop_toBottomOf="@+id/txtCharacterHeight" />
 
         <TextView
                 android:id="@+id/txtCharacterWeight"
-                android:text="@{detailsViewModel.personData.mass}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@{detailsViewModel.personData.mass}"
+                android:textAlignment="center"
                 android:textSize="@dimen/normal_text_size"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textAlignment="center"
-                app:layout_constraintTop_toBottomOf="@+id/lblCharacterWeight"/>
+                app:layout_constraintTop_toBottomOf="@+id/lblCharacterWeight" />
 
         <TextView
                 android:id="@+id/lblCharacterHair"
-                android:text="@string/details_hair_color_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/lightColor"
                 android:padding="@dimen/default_padding"
+                android:text="@string/details_hair_color_label"
                 android:textAlignment="center"
+                android:textColor="@color/lightColor"
                 android:textSize="@dimen/normal_text_size"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -108,24 +107,24 @@
 
         <TextView
                 android:id="@+id/txtCharacterHair"
-                android:text="@{detailsViewModel.personData.hairColor}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@{detailsViewModel.personData.hairColor}"
+                android:textAlignment="center"
                 android:textSize="@dimen/normal_text_size"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textAlignment="center"
-                app:layout_constraintTop_toBottomOf="@+id/lblCharacterHair"/>
+                app:layout_constraintTop_toBottomOf="@+id/lblCharacterHair" />
 
         <TextView
                 android:id="@+id/lblCharacterSkin"
-                android:text="@string/details_skin_color_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/lightColor"
                 android:padding="@dimen/default_padding"
+                android:text="@string/details_skin_color_label"
                 android:textAlignment="center"
+                android:textColor="@color/lightColor"
                 android:textSize="@dimen/normal_text_size"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -133,24 +132,24 @@
 
         <TextView
                 android:id="@+id/txtCharacterSkin"
-                android:text="@{detailsViewModel.personData.skinColor}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@{detailsViewModel.personData.skinColor}"
+                android:textAlignment="center"
                 android:textSize="@dimen/normal_text_size"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textAlignment="center"
-                app:layout_constraintTop_toBottomOf="@+id/lblCharacterSkin"/>
+                app:layout_constraintTop_toBottomOf="@+id/lblCharacterSkin" />
 
         <TextView
                 android:id="@+id/lblCharacterEyeColor"
-                android:text="@string/details_eye_color_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/lightColor"
                 android:padding="@dimen/default_padding"
+                android:text="@string/details_eye_color_label"
                 android:textAlignment="center"
+                android:textColor="@color/lightColor"
                 android:textSize="@dimen/normal_text_size"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -158,49 +157,49 @@
 
         <TextView
                 android:id="@+id/txtCharacterEyeColor"
-                android:text="@{detailsViewModel.personData.eyeColor}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@{detailsViewModel.personData.eyeColor}"
+                android:textAlignment="center"
                 android:textSize="@dimen/normal_text_size"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@+id/lblCharacterEyeColor" />
 
         <TextView
                 android:id="@+id/lblCharacterBirth"
-                android:text="@string/details_birth_date_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/lightColor"
                 android:padding="@dimen/default_padding"
+                android:text="@string/details_birth_date_label"
                 android:textAlignment="center"
+                android:textColor="@color/lightColor"
                 android:textSize="@dimen/normal_text_size"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtCharacterEyeColor"/>
+                app:layout_constraintTop_toBottomOf="@+id/txtCharacterEyeColor" />
 
         <TextView
                 android:id="@+id/txtCharacterBirth"
-                android:text="@{detailsViewModel.personData.birthYear}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@{detailsViewModel.personData.birthYear}"
+                android:textAlignment="center"
                 android:textSize="@dimen/normal_text_size"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textAlignment="center"
                 app:layout_constraintTop_toBottomOf="@+id/lblCharacterBirth" />
 
         <TextView
                 android:id="@+id/lblCharacterGender"
-                android:text="@string/details_gender_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/lightColor"
                 android:padding="@dimen/default_padding"
+                android:text="@string/details_gender_label"
                 android:textAlignment="center"
+                android:textColor="@color/lightColor"
                 android:textSize="@dimen/normal_text_size"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -208,12 +207,12 @@
 
         <TextView
                 android:id="@+id/txtCharacterGender"
-                android:text="@{detailsViewModel.personData.gender}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@{detailsViewModel.personData.gender}"
+                android:textAlignment="center"
                 android:textSize="@dimen/normal_text_size"
                 app:layout_constraintStart_toStartOf="parent"
-                android:textAlignment="center"
-                app:layout_constraintTop_toBottomOf="@+id/lblCharacterGender"  />
+                app:layout_constraintTop_toBottomOf="@+id/lblCharacterGender" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
