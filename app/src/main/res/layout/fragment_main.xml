@@ -15,25 +15,17 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:adapter="@{mainViewModel.getPeopleList()}"
-            app:layout_constraintBottom_toTopOf="@id/loading"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-<!--        <Button-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/main_search_button"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            android:id="@+id/btLoadMore"/>-->
-        <ProgressBar
-                android:id="@+id/loading"
-                android:layout_width="match_parent"
-                android:layout_height="48px"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"></ProgressBar>
 
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_search_button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/btLoadMore"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

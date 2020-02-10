@@ -2,16 +2,14 @@ package com.example.maytheforcebewith.ui.main
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
-import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
-
 import com.example.maytheforcebewith.R
 import com.example.maytheforcebewith.databinding.FragmentMainBinding
 import com.example.maytheforcebewith.ui.main.adapter.PeopleAdapter
@@ -33,9 +31,9 @@ class MainFragment : Fragment() {
         binding.mainViewModel = viewModel
 
         configuraRecyclerView()
-//        binding.btLoadMore.setOnClickListener {
-//            viewModel.get()
-//        }
+        binding.btLoadMore.setOnClickListener {
+            viewModel.get()
+        }
         return binding.root
     }
 

@@ -3,13 +3,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="details_favorite_cb_label">Favorite</string>
+    <string name="details_favorite_cb_label">Favorite character</string>
     <string name="details_gender_label">Gender</string>
     <string name="details_birth_date_label">Birth Date</string>
     <string name="details_eye_color_label">Eye Color</string>
     <string name="details_skin_color_label">Skin Color</string>
     <string name="details_hair_color_label">Hair Color</string>
-    <string name="details_weight_label">Weight</string>
+    <string name="details_mass_label">Mass</string>
     <string name="details_height_label">Height</string>
-    <string name="main_search_button">Search</string>
+    <string name="main_search_button">Search 10 More</string>
 </resources>

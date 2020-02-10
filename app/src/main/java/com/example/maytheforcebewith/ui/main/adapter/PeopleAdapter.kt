@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.maytheforcebewith.R
-import com.example.maytheforcebewith.databinding.ItemPeopleBinding
 import com.example.maytheforcebewith.base.model.People
+import com.example.maytheforcebewith.databinding.ItemPeopleBinding
 import com.example.maytheforcebewith.util.helpers.AdapterItemsContract
 
 class PeopleAdapter(private var people: MutableList<People>, private val clickListener : (String) -> Unit) : RecyclerView.Adapter<PeopleAdapter.PeoplesViewHolder>(),

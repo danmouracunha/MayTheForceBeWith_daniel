@@ -1,9 +1,13 @@
 package com.example.maytheforcebewith.ui.main.repository
 
-import com.example.maytheforcebewith.base.model.UseCaseResult
-import com.example.maytheforcebewith.base.model.Data
+import com.example.maytheforcebewith.base.model.DataApi
+import com.example.maytheforcebewith.network.PeopleApi
 
-interface MainRepository{
-    open suspend fun getPeople() : UseCaseResult<Data>
-    open suspend fun getPeople(nextUrl: String) : UseCaseResult<Data>
+open class MainRepository(private val peopleApi: PeopleApi) {
+    suspend fun getPeopleNextPage(): DataApi {
+        return peopleApi.getPeople().body()!!
+    }
+    suspend fun getPeopleNextPage(nextUrl: String): DataApi {
+        return peopleApi.getPeople(nextUrl).body()!!
+    }
 }

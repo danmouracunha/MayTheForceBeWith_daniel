@@ -7,7 +7,7 @@ import com.example.maytheforcebewith.injection.module.ApiModule
 import com.example.maytheforcebewith.ui.details.DetailsViewModel
 import com.example.maytheforcebewith.ui.main.MainViewModel
 
-open class BaseViewModel : ViewModel(){
+open class BaseViewModel : ViewModel() {
     private val injectorApi: ViewModelInjector = DaggerViewModelInjector
         .builder()
         .networkModule(ApiModule)
@@ -18,7 +18,7 @@ open class BaseViewModel : ViewModel(){
     }
 
     /**
-     * Injects the required dependencies
+     * Dagger inject
      */
     private fun inject() {
         when (this) {

@@ -30,11 +30,12 @@ class DetailsFragment : Fragment() {
 
         binding.detailsViewModel = viewModel
 
-        favoriteListPreference = if(getPreferencesSet(PREFERENCE_FAVORITE_LIST, context!!) != null){
-            getPreferencesSet(PREFERENCE_FAVORITE_LIST, context!!)!!
-        }else{
-            mutableSetOf()
-        }
+        favoriteListPreference =
+            if (getPreferencesSet(PREFERENCE_FAVORITE_LIST, context!!) != null) {
+                getPreferencesSet(PREFERENCE_FAVORITE_LIST, context!!)!!
+            } else {
+                mutableSetOf()
+            }
 
         val person = arguments?.getString(PERSON_URL)
 
@@ -55,7 +56,12 @@ class DetailsFragment : Fragment() {
                         character
                     )
                 }
-                setPreferencesSet(favoriteListPreference.toList(), PREFERENCE_FAVORITE_LIST, true, context!!)
+                setPreferencesSet(
+                    favoriteListPreference.toList(),
+                    PREFERENCE_FAVORITE_LIST,
+                    true,
+                    context!!
+                )
             }
         }
         viewModel.successRequest.observe(this, Observer {
@@ -64,7 +70,12 @@ class DetailsFragment : Fragment() {
                     binding.cbFavorite.isChecked = true
                     viewModel.personData.value?.name?.let { character ->
                         favoriteListPreference.add(character)
-                        setPreferencesSet(favoriteListPreference.toList(), PREFERENCE_FAVORITE_LIST, true, context!!)
+                        setPreferencesSet(
+                            favoriteListPreference.toList(),
+                            PREFERENCE_FAVORITE_LIST,
+                            true,
+                            context!!
+                        )
                     }
                 }
                 -1 -> binding.cbFavorite.isChecked = false
@@ -73,18 +84,12 @@ class DetailsFragment : Fragment() {
         return binding.root
     }
 
-    private fun isFavorite(name : String): Boolean {
+    private fun isFavorite(name: String): Boolean {
         favoriteListPreference.forEach {
             if (it.contains(name))
                 return true
         }
         return false
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        // TODO: Use the ViewModel
     }
 
 }
